@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".PaymentComplete">
+
+    <TextView
+        android:id="@+id/paymentsucces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Payment is Successful "
+        android:textSize="30dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#73DD09"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/qrcodeimage"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_below="@id/paymentsucces"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
+
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="26dp"
+        android:padding="50dp"
+        android:src="@drawable/qrcode"
+        app:layout_constraintTop_toBottomOf="@+id/paymentsucces"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <TextView
+        android:id="@+id/showurtickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qrcodeimage"
+        android:text=" Show Your Tickets at the Counter "
+        android:textSize="30dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#05F183"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

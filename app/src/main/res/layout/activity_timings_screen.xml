@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimingsScreen"
+    android:background="@color/teal_700">
+
+
+    <TextView
+        android:id="@+id/timings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="Select your Timings"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timingslayout1"
+        android:layout_below="@+id/timings"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timings11"
+            android:layout_below="@id/timings"
+            android:text="11:00AM"
+            app:icon="@drawable/ic_baseline_event_seat_24"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="36dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timings03"
+            android:layout_below="@id/timings"
+            android:text="03:00PM"
+            app:icon="@drawable/ic_baseline_event_seat_24"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="36dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timingslayout2"
+        android:layout_below="@+id/timingslayout1"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timings06"
+            android:layout_below="@id/timings"
+            android:text="06:00PM"
+            app:icon="@drawable/ic_baseline_event_seat_24"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="36dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timings09"
+            android:layout_below="@id/timings"
+            android:text="09:00PM"
+            app:icon="@drawable/ic_baseline_event_seat_24"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="36dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

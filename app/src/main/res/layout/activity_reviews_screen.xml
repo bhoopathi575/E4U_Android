@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".ReviewsScreen">
+    <TextView
+        android:id="@+id/movie1title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Reviews"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+    <ImageView
+        android:layout_below="@id/movie1title"
+        android:id="@+id/movie1img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/movie1" />
+    <TextView
+        android:id="@+id/movie1name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Acharaya"
+        android:textSize="50dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/movie1img"
+        android:layout_below="@id/movie1title"
+
+        />
+    <TextView
+        android:id="@+id/movie1price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:text="30$"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/movie1img"
+        android:layout_below="@id/movie1name"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/movie1img"
+        android:id="@+id/movie1bookbtn"
+        android:layout_below="@id/movie1price"
+        android:text="Book"
+        android:backgroundTint="@color/purple_500"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        />
+    <TextView
+        android:id="@+id/movie1review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+       android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@id/movie1img"
+        />
+
+
+</RelativeLayout>
