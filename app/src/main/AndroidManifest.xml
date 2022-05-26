@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -10,9 +9,96 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".TheatreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddTheatreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddGenreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".theatre_ui.xml"
+            android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Review16screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review15screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review14screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review13screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review12screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review11screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review10screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review9screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review8screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review7screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review6screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review5screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review4screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review3Screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".Review2screen"
+            android:exported="false"
+            android:parentActivityName=".SelectionPage" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication.NoActionBar">
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".TimingsScreen"
             android:exported="false"
-            android:parentActivityName=".ReviewsScreen"/>
+            android:parentActivityName=".ReviewsScreen" />
         <activity
             android:name=".UserProfile"
             android:exported="false"
@@ -51,7 +137,9 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication.NoActionBar">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
