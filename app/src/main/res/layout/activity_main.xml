@@ -129,6 +129,7 @@
 
 
         <ImageView
+            android:id="@+id/signInWithGoogle"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_margin="20dp"

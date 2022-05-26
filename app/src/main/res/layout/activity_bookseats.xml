@@ -30,91 +30,71 @@
 
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s1"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s2"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s3"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s4"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s5"
+
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s6"
+
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s7"
+
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s8"
+
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s9"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s10"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
 
 
     </LinearLayout>
@@ -128,84 +108,66 @@
 
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s11"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s12"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s13"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s14"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s15"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s16"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s17"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s18"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s19"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s20"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
 
 
     </LinearLayout>
@@ -218,85 +180,65 @@ android:layout_below="@id/seatssrc1"
 android:gravity="center">
 
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s21"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s22"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s23"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s24"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s25"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s26"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s27"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s28"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s29"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s30"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
 
 </LinearLayout>
@@ -309,83 +251,63 @@ android:gravity="center">
 
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s31"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s32"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s33"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s34"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s35"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s36"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s37"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s38"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s39"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
+            android:id="@+id/s40"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
             android:src="@drawable/ic_baseline_event_seat_24" />
 
 
@@ -399,86 +321,65 @@ android:layout_below="@id/seatssrc3"
 android:gravity="center">
 
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s41"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s42"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s43"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s44"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s45"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s46"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s47"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s48"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s49"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
+    <ImageView
+        android:id="@+id/s50"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
 </LinearLayout>
 
@@ -490,86 +391,65 @@ android:layout_below="@id/seatssrc4"
 android:gravity="center">
 
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s51"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s52"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s53"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s54"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s55"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s56"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s57"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s58"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s59"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
+    <ImageView
+        android:id="@+id/s60"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
 </LinearLayout>
 
@@ -581,269 +461,68 @@ android:layout_below="@id/seatssrc5"
 android:gravity="center">
 
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s61"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s62"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s63"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s64"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s65"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s66"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s67"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s68"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
+    <ImageView
+        android:id="@+id/s69"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-<ImageView
-    android:layout_width="20dp"
-    android:layout_height="30dp"
-    android:src="@drawable/ic_baseline_event_seat_24" />
-
-
+    <ImageView
+        android:id="@+id/s70"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_baseline_event_seat_24" />
 </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/seatssrc7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/seatssrc6"
-        android:gravity="center">
 
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/seatssrc8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/seatssrc7"
-        android:gravity="center">
-
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_event_seat_24" />
-
-
-    </LinearLayout>
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

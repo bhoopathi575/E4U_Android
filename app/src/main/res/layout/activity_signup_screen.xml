@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signup"
+        android:id="@+id/signuptext"
         android:text="Sign up"
         android:textColor="@color/white"
         android:textSize="35dp"
@@ -19,44 +19,29 @@
         android:gravity="center"/>
 
     <EditText
-        android:id="@+id/firstname"
+        android:id="@+id/fullname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/signup"
+        android:layout_below="@id/signuptext"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#30ffffff"
         android:drawablePadding="20dp"
-        android:hint="First name"
+        android:hint="Full Name"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
-    <EditText
-        android:id="@+id/lastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/firstname"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
-        android:drawablePadding="20dp"
-        android:hint="Last name"
-        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+
 
     <EditText
         android:id="@+id/emailid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lastname"
+        android:layout_below="@id/fullname"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -145,7 +130,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Already have an account!"
+        android:text="Already have an account?"
         android:textColor="@color/white"
         android:textSize="16dp" />
 
