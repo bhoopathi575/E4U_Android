@@ -19,10 +19,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class signupScreen extends AppCompatActivity implements View.OnClickListener {
+public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     public Button button;
     public TextView textView;
-    private  EditText editfullnametext,editemailtext,editmobilenotext,editpasswordtext,editreenterpasswordtext;
+    private  EditText editfullnametext,editemailtext,editmobilenotext,editpasswordtext;
 
 
 
@@ -48,7 +48,7 @@ public class signupScreen extends AppCompatActivity implements View.OnClickListe
         editemailtext = (EditText) findViewById(R.id.emailid);
         editmobilenotext = (EditText) findViewById(R.id.mobilenumber);
         editpasswordtext = (EditText) findViewById(R.id.password);
-        editreenterpasswordtext = (EditText) findViewById(R.id.re_enter_password);
+
 
 
 
@@ -61,10 +61,10 @@ public class signupScreen extends AppCompatActivity implements View.OnClickListe
                 registerUser();
                 break;
             case R.id.backtosignin:
-                startActivity(new Intent(signupScreen.this, MainActivity.class));
+                startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                 break;
             case R.id.signuptext:
-                startActivity(new Intent(signupScreen.this,signupScreen.class));
+                startActivity(new Intent(SignUpActivity.this, SignUpActivity.class));
 
         }
     }
@@ -74,7 +74,6 @@ public class signupScreen extends AppCompatActivity implements View.OnClickListe
         String email = editemailtext.getText().toString().trim();
         String mobileno = editmobilenotext.getText().toString().trim();
         String password = editpasswordtext.getText().toString().trim();
-        String re_enter_password = editreenterpasswordtext.getText().toString().trim();
 
         if (fullname.isEmpty()){
             editfullnametext.setError("FullName Is required!");
@@ -113,37 +112,24 @@ public class signupScreen extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        if (re_enter_password.isEmpty()){
-            editreenterpasswordtext.setError("Re Enter Password Is Required Is required!");
-            editreenterpasswordtext.requestFocus();
-            return;
-        }
-
-        if(password.length() != re_enter_password.length()){
-            editreenterpasswordtext.setError(("Password length is not matching"));
-            editreenterpasswordtext.requestFocus();
-            return;
-        }
-
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     User user = new User(fullname,email,mobileno);
-
                     FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()){
-                                Toast.makeText(signupScreen.this,"User has been registered Successfully!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignUpActivity.this,"User has been registered Successfully!", Toast.LENGTH_LONG).show();
 
                             } else {
-                                Toast.makeText(signupScreen.this,"User registration Failed! Try again!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(SignUpActivity.this,"User registration Failed! Try again!", Toast.LENGTH_LONG).show();
                             }
                         }
                     });
                 }else{
-                    Toast.makeText(signupScreen.this,"User registration Failed! Try again!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(SignUpActivity.this,"User registration Failed! Try again!", Toast.LENGTH_LONG).show();
                 }
             }
         });
