@@ -3,18 +3,18 @@ package com.example.myapplication.model;
 public class Theatre {
     // instance variables
     private boolean isOpen;
-    private String location;
-    private String name;
-    private String rating;
+    private String TheatreLocation;
+    private String TheatreName;
+    private String TheatreRating;
 
     public Theatre() {
     }
 
     public Theatre(boolean isOpen, String location, String name, String rating) {
         this.isOpen = isOpen;
-        this.location = location;
-        this.name = name;
-        this.rating = rating;
+        this.TheatreLocation = location;
+        this.TheatreName = name;
+        this.TheatreRating = rating;
     }
 
     public boolean isOpen() {
@@ -25,27 +25,27 @@ public class Theatre {
         isOpen = open;
     }
 
-    public String getLocation() {
-        return location;
+    public String getTheatreLocation() {
+        return TheatreLocation;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setTheatreLocation(String theatreLocation) {
+        this.TheatreLocation = theatreLocation;
     }
 
-    public String getName() {
-        return name;
+    public String getTheatreName() {
+        return TheatreName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTheatreName(String theatreName) {
+        this.TheatreName = theatreName;
     }
 
-    public String getRating() {
-        return rating;
+    public String getTheatreRating() {
+        return TheatreRating;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    public void setTheatreRating(String theatreRating) {
+        this.TheatreRating = theatreRating;
     }
 }

@@ -11,4 +11,16 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="WEB_CLIENT_ID">830923337517-2v9641m3vm759lj9o7r7lmtei3avt58q.apps.googleusercontent.com</string>
 
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
+
+    <string-array name="genres">
+        <item>Horror</item>
+        <item>Action</item>
+        <item>Drama</item>
+        <item>Comedy</item>
+    </string-array>
+
 </resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/movieImage"
+            android:layout_width="150dp"
+            android:layout_height="155dp" />
+        <TextView
+            android:id="@+id/tv_movieName"
+            android:text="Movie Name"
+            android:layout_toRightOf="@id/movieImage"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_genreMovie"
+            android:text="Genre"
+            android:layout_below="@id/tv_movieName"
+            android:layout_toRightOf="@id/movieImage"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_movieprice"
+            android:text="Price: "
+            android:padding="5dp"
+            android:layout_toRightOf="@id/movieImage"
+            android:layout_below="@id/tv_genreMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_deleteMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movieprice"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:text="BOOK" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

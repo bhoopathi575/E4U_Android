@@ -4,6 +4,9 @@
         android:id="@+id/userprofile"
         android:title="User details" />
     <item
+        android:id="@+id/theateractivity"
+        android:title="Theaters List" />
+    <item
         android:id="@+id/logout"
         android:title="Logout" />
 </menu>
