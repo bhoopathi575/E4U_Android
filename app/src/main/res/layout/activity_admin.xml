@@ -9,23 +9,25 @@
 
     <LinearLayout
         android:id="@+id/layout"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:weightSum="3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
         <Button
-            android:id="@+id/addGenre"
-            android:text="Add Genre"
+            android:id="@+id/addMovie"
+            android:text="Add Movie"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/addTheatre"
             android:text="Add Theatre"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <Button
@@ -33,15 +35,26 @@
             android:text="Theatres"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/viewMovies"
+            android:text="Movies"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/genreList"
-        android:layout_margin="5dp"
-        android:layout_below="@id/layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/genreList"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/layout"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:layout_marginBottom="5dp" />-->
 
 </RelativeLayout>

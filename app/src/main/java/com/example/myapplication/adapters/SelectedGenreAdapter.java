@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 //import com.bumptech.glide.Glide;
 import com.example.myapplication.Bookseats;
 import com.example.myapplication.R;
-import com.example.myapplication.model.Genre;
+import com.example.myapplication.model.Movies;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +25,10 @@ import java.util.List;
 public class SelectedGenreAdapter extends RecyclerView.Adapter<SelectedGenreAdapter.UI>
         implements Filterable {
     private Context context;
-    private List<Genre> genreList;
-    private List<Genre> genreListFiltered;
+    private List<Movies> genreList;
+    private List<Movies> genreListFiltered;
 
-    public SelectedGenreAdapter(Context context, List<Genre> genreList) {
+    public SelectedGenreAdapter(Context context, List<Movies> genreList) {
         this.context = context;
         this.genreList = genreList;
         this.genreListFiltered = genreList;
@@ -44,9 +44,9 @@ public class SelectedGenreAdapter extends RecyclerView.Adapter<SelectedGenreAdap
 
     @Override
     public void onBindViewHolder(@NonNull UI holder, int position) {
-        Genre genre = genreList.get(position);
-        holder.name.setText(genre.getName());
-        holder.rating.setText(genre.getRating());
+        Movies genre = genreList.get(position);
+        holder.name.setText(genre.getMovieName());
+        holder.rating.setText(genre.getMoviePrice());
 //        Glide.with(context)
 //                .load(genre.getAvatarUrl())
 //                .centerCrop()
@@ -55,7 +55,7 @@ public class SelectedGenreAdapter extends RecyclerView.Adapter<SelectedGenreAdap
 
         holder.btnBook.setOnClickListener(v -> {
             context.startActivity(new Intent(context, Bookseats.class)
-                    .putExtra("name", genre.getName()));
+                    .putExtra("name", genre.getMovieName()));
         });
     }
 
@@ -73,9 +73,9 @@ public class SelectedGenreAdapter extends RecyclerView.Adapter<SelectedGenreAdap
                 if (text.isEmpty()) {
                     genreListFiltered = genreList;
                 } else {
-                    List<Genre> filteredList = new ArrayList<>();
-                    for (Genre genre : genreList) {
-                        if (genre.getName().toLowerCase().contains(text.toLowerCase())) {
+                    List<Movies> filteredList = new ArrayList<>();
+                    for (Movies genre : genreList) {
+                        if (genre.getMovieName().toLowerCase().contains(text.toLowerCase())) {
                             filteredList.add(genre);
                         }
                     }
@@ -88,7 +88,7 @@ public class SelectedGenreAdapter extends RecyclerView.Adapter<SelectedGenreAdap
 
             @Override
             protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-                genreListFiltered = (ArrayList<Genre>) filterResults.values;
+                genreListFiltered = (ArrayList<Movies>) filterResults.values;
                 notifyDataSetChanged();
             }
         };

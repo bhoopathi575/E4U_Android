@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/movieImage"
+            android:layout_width="150dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:id="@+id/tv_movieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/movieImage"
+            android:padding="5dp"
+            android:text="Movie Name"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_genreMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movieName"
+            android:layout_toRightOf="@id/movieImage"
+            android:padding="5dp"
+            android:text="Genre" />
+
+        <TextView
+            android:id="@+id/tv_movieprice"
+            android:text="Price: "
+            android:padding="5dp"
+            android:layout_toRightOf="@id/movieImage"
+            android:layout_below="@id/tv_genreMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_deleteMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movieprice"
+            android:paddingLeft="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/movieImage"
+            android:text="Delete"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

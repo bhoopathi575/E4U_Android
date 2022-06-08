@@ -1,24 +1,15 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.myapplication.adapters.SelectedGenreAdapter;
-import com.example.myapplication.model.Genre;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
+import com.example.myapplication.model.Movies;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 import java.util.ArrayList;
@@ -29,8 +20,8 @@ public class AdminActivity extends AppCompatActivity {
     private Button btnAddGenre;
     private Button btnAddTheatre;
     private Button viewTheatre;
-    private RecyclerView genreList;
-    private List<Genre> list;
+    Button btn_viewMovies;
+    private List<Movies> list;
     private FirebaseDatabase database;
 
     @Override
@@ -42,13 +33,13 @@ public class AdminActivity extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         list = new ArrayList<>();
 
-        btnAddGenre = findViewById(R.id.addGenre);
+        btnAddGenre = findViewById(R.id.addMovie);
         btnAddTheatre = findViewById(R.id.addTheatre);
-        genreList = findViewById(R.id.genreList);
         viewTheatre = findViewById(R.id.viewTheatre);
+        btn_viewMovies = findViewById(R.id.viewMovies);
 
         btnAddGenre.setOnClickListener(v -> {
-            startActivity(new Intent(AdminActivity.this, AddGenreActivity.class));
+            startActivity(new Intent(AdminActivity.this, AddMovieActivity.class));
         });
 
         btnAddTheatre.setOnClickListener(v -> {
@@ -56,41 +47,52 @@ public class AdminActivity extends AppCompatActivity {
         });
 
         viewTheatre.setOnClickListener(v -> {
-            startActivity(new Intent(this, TheatreActivity.class));
+            startActivity(new Intent(this, adminTheatreActivity.class));
         });
 
-        populateGenres();
-    }
-
-    private void populateGenres(){
-        dialog.setMessage("Please wait");
-        dialog.setCancelable(false);
-        dialog.show();
-        LinearLayoutManager layout = new LinearLayoutManager(this);
-        genreList.setLayoutManager(layout);
-
-        // retrieve from database
-        DatabaseReference genre_ref = database.getReference("genre_all");
-        genre_ref.addValueEventListener(new ValueEventListener() {
+        btn_viewMovies.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                dialog.dismiss();
-                for (DataSnapshot s : snapshot.getChildren()){
-                    Genre genre = s.getValue(Genre.class);
-                    list.add(genre);
-                }
-
-                SelectedGenreAdapter adapter = new SelectedGenreAdapter(AdminActivity.this, list);
-                genreList.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                dialog.dismiss();
-                Toast.makeText(AdminActivity.this, "Error fetching genres: \n" + error.getMessage(), Toast.LENGTH_SHORT).show();
-
+            public void onClick(View view) {
+                startActivity(new Intent(AdminActivity.this, AdminMovieActivity.class));
             }
         });
 
+
     }
-}
+
+    private void populateGenres() {
+
+    }
+
+//    private void populateGenres(){
+//        dialog.setMessage("Please wait");
+//        dialog.setCancelable(false);
+//        dialog.show();
+//        LinearLayoutManager layout = new LinearLayoutManager(this);
+//        genreList.setLayoutManager(layout);
+//
+//        // retrieve from database
+//        DatabaseReference genre_ref = database.getReference("genre_all");
+//        genre_ref.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                dialog.dismiss();
+//                for (DataSnapshot s : snapshot.getChildren()){
+//                    Genre genre = s.getValue(Genre.class);
+//                    list.add(genre);
+//                }
+//
+//                SelectedGenreAdapter adapter = new SelectedGenreAdapter(AdminActivity.this, list);
+//                genreList.setAdapter(adapter);
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                dialog.dismiss();
+//                Toast.makeText(AdminActivity.this, "Error fetching genres: \n" + error.getMessage(), Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
+
+
+    }
