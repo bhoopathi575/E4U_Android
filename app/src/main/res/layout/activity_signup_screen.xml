@@ -5,18 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/teal_700"
-    tools:context=".signupScreen">
+    tools:context=".SignUpActivity">
 
     <TextView
+        android:id="@+id/signuptext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/signuptext"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:text="Sign up"
         android:textColor="@color/white"
         android:textSize="35dp"
-        android:textStyle="bold"
-        android:layout_margin="10dp"
-        android:gravity="center"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/fullname"
@@ -88,29 +91,14 @@
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
-    <EditText
-        android:id="@+id/re_enter_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/password"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
-        android:drawablePadding="20dp"
-        android:hint="Re Enter password"
-        android:drawableLeft="@drawable/ic_baseline_info_24"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white" />
+
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signupbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/re_enter_password"
+        android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
@@ -130,8 +118,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Already have an account?"
+        android:text="Already have an account!"
         android:textColor="@color/white"
-        android:textSize="16dp" />
+        android:textSize="18dp" />
 
 </RelativeLayout>

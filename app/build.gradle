@@ -41,10 +41,23 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.google.firebase:firebase-database:20.0.5'
+    implementation files('libs/byte-buddy-1.12.10.jar')
+    implementation files('libs/byte-buddy-agent-1.12.10.jar')
+    implementation files('libs/mockito-core-4.6.1.jar')
+    implementation files('libs/objenesis-3.2.jar')
+    implementation files('libs/mail.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/activation.jar')
+    implementation 'com.razorpay:checkout:1.6.21'
+    implementation 'com.razorpay:checkout:1.6.21'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation platform('com.google.firebase:firebase-bom:30.0.0')
     implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+
 
 }

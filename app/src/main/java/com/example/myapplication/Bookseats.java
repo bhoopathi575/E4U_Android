@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,8 +9,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class Bookseats extends AppCompatActivity implements View.OnClickListener {
+import com.razorpay.Checkout;
+import com.razorpay.PaymentResultListener;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class Bookseats extends AppCompatActivity implements View.OnClickListener, PaymentResultListener {
     public Button button;
     public ImageView imageView1, imageView2,imageView3,imageView4,imageView5,imageView6,imageView7,imageView8,imageView9,imageView10,
             imageView11, imageView12,imageView13,imageView14,imageView15,imageView16,imageView17,imageView18,imageView19,imageView20,
@@ -18,12 +27,18 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
             imageView41, imageView42,imageView43,imageView44,imageView45,imageView46,imageView47,imageView48,imageView49,imageView50,
             imageView51, imageView52,imageView53,imageView54,imageView55,imageView56,imageView57,imageView58,imageView59,imageView60,
             imageView61, imageView62,imageView63,imageView64,imageView65,imageView66,imageView67,imageView68,imageView69,imageView70;
+    Integer count = 0;
+    public TextView textView;
+    String sAmount = "25";
+
+    int amount = Math.round(Float.parseFloat(sAmount)*100);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookseats);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
         imageView1 = (ImageView) findViewById(R.id.s2);
@@ -174,6 +189,7 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
 
 
 
+
         button = (Button) findViewById(R.id.continuebtn);
         button.setOnClickListener(this);
 
@@ -183,14 +199,43 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.continuebtn:
-                startActivity(new Intent(Bookseats.this, PaymentPage.class));
+                Checkout checkout = new Checkout();
+
+                checkout.setKeyID("rzp_test_HCVYCp9beI7gNu");
+
+                checkout.setImage(R.drawable.rzpay);
+
+                JSONObject object = new JSONObject();
+                try {
+                    object.put("name","Entertainment4U");
+                    object.put("description","Payment");
+                    object.put("theme.color","#0093DD");
+                    object.put("currency","CAD");
+                    object.put("amount",amount);
+                    object.put("prefill.contact","5146326464");
+                    object.put("prefill.email","bhoopathi575@gmail.com");
+
+
+                    checkout.open(Bookseats.this,object);
+
+
+                } catch (JSONException e){
+                    e.printStackTrace();
+                }
+
                 break;
             case R.id.s1:
                 imageView10.setSelected(!imageView10.isSelected());
+
                 if (imageView10.isSelected()) {
                     imageView10.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView10.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
+
 
                 }
                 break;
@@ -198,8 +243,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView1.setSelected(!imageView1.isSelected());
                 if (imageView1.isSelected()) {
                     imageView1.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView1.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -207,8 +256,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView2.setSelected(!imageView2.isSelected());
                 if (imageView2.isSelected()) {
                     imageView2.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView2.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -216,8 +269,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView3.setSelected(!imageView3.isSelected());
                 if (imageView3.isSelected()) {
                     imageView3.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView3.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -225,8 +282,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView4.setSelected(!imageView4.isSelected());
                 if (imageView4.isSelected()) {
                     imageView4.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView4.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -234,8 +295,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView5.setSelected(!imageView5.isSelected());
                 if (imageView5.isSelected()) {
                     imageView5.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView5.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -243,8 +308,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView6.setSelected(!imageView6.isSelected());
                 if (imageView6.isSelected()) {
                     imageView6.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView6.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -252,8 +321,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView7.setSelected(!imageView7.isSelected());
                 if (imageView7.isSelected()) {
                     imageView7.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView7.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -261,8 +334,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView8.setSelected(!imageView8.isSelected());
                 if (imageView8.isSelected()) {
                     imageView8.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView8.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
 
@@ -271,8 +348,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView9.setSelected(!imageView9.isSelected());
                 if (imageView9.isSelected()) {
                     imageView9.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView9.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
 
@@ -282,8 +363,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView11.setSelected(!imageView11.isSelected());
                 if (imageView11.isSelected()) {
                     imageView11.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView11.setColorFilter(getResources().getColor(R.color.white));
+                    imageView11.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -291,8 +375,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView12.setSelected(!imageView12.isSelected());
                 if (imageView12.isSelected()) {
                     imageView12.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView12.setColorFilter(getResources().getColor(R.color.white));
+                    imageView12.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -300,8 +387,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView13.setSelected(!imageView13.isSelected());
                 if (imageView13.isSelected()) {
                     imageView13.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView13.setColorFilter(getResources().getColor(R.color.white));
+                    imageView13.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -309,8 +399,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView14.setSelected(!imageView14.isSelected());
                 if (imageView14.isSelected()) {
                     imageView14.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView14.setColorFilter(getResources().getColor(R.color.white));
+                    imageView14.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -318,8 +411,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView15.setSelected(!imageView15.isSelected());
                 if (imageView15.isSelected()) {
                     imageView15.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView15.setColorFilter(getResources().getColor(R.color.white));
+                    imageView15.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -327,8 +423,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView16.setSelected(!imageView16.isSelected());
                 if (imageView16.isSelected()) {
                     imageView16.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView16.setColorFilter(getResources().getColor(R.color.white));
+                    imageView16.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -336,8 +435,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView17.setSelected(!imageView17.isSelected());
                 if (imageView17.isSelected()) {
                     imageView17.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView17.setColorFilter(getResources().getColor(R.color.white));
+                    imageView17.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -345,8 +447,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView18.setSelected(!imageView18.isSelected());
                 if (imageView18.isSelected()) {
                     imageView18.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView18.setColorFilter(getResources().getColor(R.color.white));
+                    imageView18.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -354,8 +459,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView19.setSelected(!imageView19.isSelected());
                 if (imageView19.isSelected()) {
                     imageView19.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView19.setColorFilter(getResources().getColor(R.color.white));
+                    imageView19.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -364,8 +472,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView20.setSelected(!imageView20.isSelected());
                 if (imageView20.isSelected()) {
                     imageView20.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView20.setColorFilter(getResources().getColor(R.color.white));
+                    imageView20.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -374,8 +485,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView21.setSelected(!imageView21.isSelected());
                 if (imageView21.isSelected()) {
                     imageView21.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView21.setColorFilter(getResources().getColor(R.color.white));
+                    imageView21.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -383,8 +497,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView22.setSelected(!imageView22.isSelected());
                 if (imageView22.isSelected()) {
                     imageView22.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView22.setColorFilter(getResources().getColor(R.color.white));
+                    imageView22.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -392,8 +509,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView23.setSelected(!imageView23.isSelected());
                 if (imageView23.isSelected()) {
                     imageView23.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView23.setColorFilter(getResources().getColor(R.color.white));
+                    imageView23.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -401,8 +521,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView24.setSelected(!imageView24.isSelected());
                 if (imageView24.isSelected()) {
                     imageView24.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView24.setColorFilter(getResources().getColor(R.color.white));
+                    imageView24.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -410,8 +533,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView25.setSelected(!imageView25.isSelected());
                 if (imageView25.isSelected()) {
                     imageView25.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView25.setColorFilter(getResources().getColor(R.color.white));
+                    imageView25.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -419,8 +545,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView26.setSelected(!imageView26.isSelected());
                 if (imageView26.isSelected()) {
                     imageView26.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView26.setColorFilter(getResources().getColor(R.color.white));
+                    imageView26.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -428,8 +557,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView27.setSelected(!imageView27.isSelected());
                 if (imageView27.isSelected()) {
                     imageView27.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView27.setColorFilter(getResources().getColor(R.color.white));
+                    imageView27.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -437,8 +569,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView28.setSelected(!imageView28.isSelected());
                 if (imageView28.isSelected()) {
                     imageView28.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView28.setColorFilter(getResources().getColor(R.color.white));
+                    imageView28.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -446,8 +581,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView29.setSelected(!imageView29.isSelected());
                 if (imageView29.isSelected()) {
                     imageView29.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView29.setColorFilter(getResources().getColor(R.color.white));
+                    imageView29.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -456,8 +594,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView30.setSelected(!imageView30.isSelected());
                 if (imageView30.isSelected()) {
                     imageView30.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView30.setColorFilter(getResources().getColor(R.color.white));
+                    imageView30.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -467,8 +608,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView31.setSelected(!imageView31.isSelected());
                 if (imageView31.isSelected()) {
                     imageView31.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView31.setColorFilter(getResources().getColor(R.color.white));
+                    imageView31.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -476,8 +620,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView32.setSelected(!imageView32.isSelected());
                 if (imageView32.isSelected()) {
                     imageView32.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView32.setColorFilter(getResources().getColor(R.color.white));
+                    imageView32.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -485,8 +632,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView33.setSelected(!imageView33.isSelected());
                 if (imageView33.isSelected()) {
                     imageView33.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView33.setColorFilter(getResources().getColor(R.color.white));
+                    imageView33.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -494,8 +644,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView34.setSelected(!imageView34.isSelected());
                 if (imageView34.isSelected()) {
                     imageView34.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView34.setColorFilter(getResources().getColor(R.color.white));
+                    imageView34.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -503,8 +656,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView35.setSelected(!imageView35.isSelected());
                 if (imageView35.isSelected()) {
                     imageView35.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView35.setColorFilter(getResources().getColor(R.color.white));
+                    imageView35.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -512,8 +668,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView36.setSelected(!imageView36.isSelected());
                 if (imageView36.isSelected()) {
                     imageView36.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView36.setColorFilter(getResources().getColor(R.color.white));
+                    imageView36.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -521,8 +680,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView37.setSelected(!imageView37.isSelected());
                 if (imageView37.isSelected()) {
                     imageView37.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView37.setColorFilter(getResources().getColor(R.color.white));
+                    imageView37.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -530,8 +692,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView38.setSelected(!imageView38.isSelected());
                 if (imageView38.isSelected()) {
                     imageView38.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView38.setColorFilter(getResources().getColor(R.color.white));
+                    imageView38.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -539,8 +704,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView39.setSelected(!imageView39.isSelected());
                 if (imageView39.isSelected()) {
                     imageView39.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView39.setColorFilter(getResources().getColor(R.color.white));
+                    imageView39.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -549,8 +717,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView40.setSelected(!imageView40.isSelected());
                 if (imageView40.isSelected()) {
                     imageView40.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView40.setColorFilter(getResources().getColor(R.color.white));
+                    imageView40.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -560,8 +731,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView41.setSelected(!imageView41.isSelected());
                 if (imageView41.isSelected()) {
                     imageView41.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView41.setColorFilter(getResources().getColor(R.color.white));
+                    imageView41.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -569,8 +743,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView42.setSelected(!imageView42.isSelected());
                 if (imageView42.isSelected()) {
                     imageView42.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView42.setColorFilter(getResources().getColor(R.color.white));
+                    imageView42.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -578,8 +755,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView43.setSelected(!imageView43.isSelected());
                 if (imageView43.isSelected()) {
                     imageView43.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView43.setColorFilter(getResources().getColor(R.color.white));
+                    imageView43.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -587,8 +767,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView44.setSelected(!imageView44.isSelected());
                 if (imageView44.isSelected()) {
                     imageView44.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView44.setColorFilter(getResources().getColor(R.color.white));
+                    imageView44.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -596,8 +779,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView45.setSelected(!imageView45.isSelected());
                 if (imageView45.isSelected()) {
                     imageView45.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView45.setColorFilter(getResources().getColor(R.color.white));
+                    imageView45.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -605,8 +791,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView46.setSelected(!imageView46.isSelected());
                 if (imageView46.isSelected()) {
                     imageView46.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView46.setColorFilter(getResources().getColor(R.color.white));
+                    imageView46.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -614,8 +803,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView47.setSelected(!imageView47.isSelected());
                 if (imageView47.isSelected()) {
                     imageView47.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView47.setColorFilter(getResources().getColor(R.color.white));
+                    imageView47.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -623,8 +815,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView48.setSelected(!imageView48.isSelected());
                 if (imageView48.isSelected()) {
                     imageView48.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView48.setColorFilter(getResources().getColor(R.color.white));
+                    imageView48.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -632,8 +827,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView49.setSelected(!imageView49.isSelected());
                 if (imageView49.isSelected()) {
                     imageView49.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView49.setColorFilter(getResources().getColor(R.color.white));
+                    imageView49.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -642,8 +840,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView50.setSelected(!imageView50.isSelected());
                 if (imageView50.isSelected()) {
                     imageView50.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView50.setColorFilter(getResources().getColor(R.color.white));
+                    imageView50.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -653,8 +854,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView51.setSelected(!imageView51.isSelected());
                 if (imageView51.isSelected()) {
                     imageView51.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView51.setColorFilter(getResources().getColor(R.color.white));
+                    imageView51.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -662,8 +866,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView52.setSelected(!imageView52.isSelected());
                 if (imageView52.isSelected()) {
                     imageView52.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView52.setColorFilter(getResources().getColor(R.color.white));
+                    imageView52.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -671,8 +878,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView53.setSelected(!imageView53.isSelected());
                 if (imageView53.isSelected()) {
                     imageView53.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView53.setColorFilter(getResources().getColor(R.color.white));
+                    imageView53.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -680,8 +890,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView54.setSelected(!imageView54.isSelected());
                 if (imageView54.isSelected()) {
                     imageView54.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView54.setColorFilter(getResources().getColor(R.color.white));
+                    imageView54.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -689,8 +902,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView55.setSelected(!imageView55.isSelected());
                 if (imageView55.isSelected()) {
                     imageView55.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView55.setColorFilter(getResources().getColor(R.color.white));
+                    imageView55.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -698,8 +914,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView56.setSelected(!imageView56.isSelected());
                 if (imageView56.isSelected()) {
                     imageView56.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView56.setColorFilter(getResources().getColor(R.color.white));
+                    imageView56.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -707,8 +926,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView57.setSelected(!imageView57.isSelected());
                 if (imageView57.isSelected()) {
                     imageView57.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView57.setColorFilter(getResources().getColor(R.color.white));
+                    imageView57.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -716,8 +938,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView58.setSelected(!imageView58.isSelected());
                 if (imageView58.isSelected()) {
                     imageView58.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView58.setColorFilter(getResources().getColor(R.color.white));
+                    imageView58.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -725,8 +950,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView59.setSelected(!imageView59.isSelected());
                 if (imageView59.isSelected()) {
                     imageView59.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView59.setColorFilter(getResources().getColor(R.color.white));
+                    imageView59.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -735,8 +963,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView60.setSelected(!imageView60.isSelected());
                 if (imageView60.isSelected()) {
                     imageView60.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView60.setColorFilter(getResources().getColor(R.color.white));
+                    imageView60.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
 
@@ -746,8 +977,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView61.setSelected(!imageView61.isSelected());
                 if (imageView61.isSelected()) {
                     imageView61.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView61.setColorFilter(getResources().getColor(R.color.white));
+                    imageView61.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -755,8 +989,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView62.setSelected(!imageView62.isSelected());
                 if (imageView62.isSelected()) {
                     imageView62.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView62.setColorFilter(getResources().getColor(R.color.white));
+                    imageView62.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -764,8 +1001,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView63.setSelected(!imageView63.isSelected());
                 if (imageView63.isSelected()) {
                     imageView63.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView63.setColorFilter(getResources().getColor(R.color.white));
+                    imageView63.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -773,8 +1013,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView64.setSelected(!imageView64.isSelected());
                 if (imageView64.isSelected()) {
                     imageView64.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView64.setColorFilter(getResources().getColor(R.color.white));
+                    imageView64.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -782,8 +1025,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView65.setSelected(!imageView65.isSelected());
                 if (imageView65.isSelected()) {
                     imageView65.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView65.setColorFilter(getResources().getColor(R.color.white));
+                    imageView65.setColorFilter(getResources().getColor(R.color.white)); count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -791,8 +1037,11 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView66.setSelected(!imageView66.isSelected());
                 if (imageView66.isSelected()) {
                     imageView66.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
-                    imageView66.setColorFilter(getResources().getColor(R.color.white));
+                    imageView66.setColorFilter(getResources().getColor(R.color.white));  count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -800,8 +1049,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView67.setSelected(!imageView67.isSelected());
                 if (imageView67.isSelected()) {
                     imageView67.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView67.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -809,8 +1062,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView68.setSelected(!imageView68.isSelected());
                 if (imageView68.isSelected()) {
                     imageView68.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView68.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
                 break;
@@ -818,8 +1075,12 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView69.setSelected(!imageView69.isSelected());
                 if (imageView69.isSelected()) {
                     imageView69.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView69.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
 
@@ -828,13 +1089,39 @@ public class Bookseats extends AppCompatActivity implements View.OnClickListener
                 imageView70.setSelected(!imageView70.isSelected());
                 if (imageView70.isSelected()) {
                     imageView70.setColorFilter(getResources().getColor(R.color.black));
+                    count = count+1;
+                    display(count);
                 } else {
                     imageView70.setColorFilter(getResources().getColor(R.color.white));
+                    count = count-1;
+                    display(count);
 
                 }
 
                 break;
 
         }
+    }
+
+    private void display(Integer number) {
+        textView = (TextView) findViewById(R.id.seatsselected);
+        textView.setText("Number of sets Selected:  " +number);
+    }
+
+    @Override
+    public void onPaymentSuccess(String s) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Payment");
+        builder.setMessage(s);
+        builder.show();
+
+        startActivity(new Intent(Bookseats.this,PaymentComplete.class));
+    }
+
+    @Override
+    public void onPaymentError(int i, String s) {
+
+        Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
+
     }
 }
